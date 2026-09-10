@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OQENTRA — Connected Intelligence Systems | Industrial IoT Platform</title>
+  <meta name="description" content="OQENTRA delivers living connected infrastructure — transforming industrial environments through sensor intelligence, real-time data systems, and autonomous automation." />
+  <meta name="keywords" content="Industrial IoT, Connected Infrastructure, Sensor Intelligence, Real-time Systems, Intelligent Automation, OQENTRA" />
+  <meta property="og:title" content="OQENTRA — Connected Intelligence Systems" />
+  <meta property="og:description" content="The world is connected. Make it intelligent." />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav class="nav" id="main-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-wordmark">
+    <img src="logo.jpg" alt="OQENTRA Logo" class="nav-logo-icon" style="border-radius: 8px; width: 40px; height: 40px; object-fit: cover; object-position: center 20%;" />
+    <div class="nav-wordmark-text">
+      <span class="nav-wordmark-primary">OQENTRA</span>
+      <span class="nav-wordmark-tagline">Connected Intelligence</span>
+    </div>
+  </div>
+
+  <ul class="nav-links" role="list">
+    <li><a href="#hero" id="nav-home">Home</a></li>
+    <li><a href="#intelligence" id="nav-intelligence">Intelligence</a></li>
+    <li><a href="#operations" id="nav-operations">Operations</a></li>
+    <li><a href="#industries" id="nav-industries">Industries</a></li>
+    <li><a href="#automation" id="nav-automation">Automation</a></li>
+    <li><a href="#contact" class="nav-cta" id="nav-cta">Connect →</a></li>
+  </ul>
+
+  <div class="nav-coords" id="nav-coords" aria-label="System coordinates">
+    SYS — 48.8566°N 2.3522°E — <span id="nav-time">00:00:00</span>
+  </div>
+</nav>
+
+
+<!-- ============================================================
+     HERO — ASYMMETRIC SPLIT
+     ============================================================ -->
+<section class="hero" id="hero" aria-label="Hero section">
+
+  <!-- LEFT: Editorial Typography -->
+  <div class="hero-left">
+    <div class="hero-brand-signature">
+      <div class="hero-brand-line"></div>
+      <span class="hero-brand-text">OQENTRA — Connected Intelligence Systems</span>
+    </div>
+
+    <h1 class="hero-headline" id="hero-headline">
+      THE WORLD<br />
+      IS <em>CONNECTED.</em><br />
+      MAKE IT<br />
+      INTELLIGENT.
+    </h1>
+
+    <p class="hero-subline">
+      Infrastructure that senses, learns, and responds — autonomously.
+    </p>
+
+    <div class="hero-meta">
+      <div class="hero-meta-row">
+        <span class="hero-meta-label">Nodes Active</span>
+        <span class="hero-meta-value live" id="hero-nodes">48,291</span>
+      </div>
+      <div class="hero-meta-row">
+        <span class="hero-meta-label">Data Streams</span>
+        <span class="hero-meta-value" id="hero-streams">1.4M / sec</span>
+      </div>
+      <div class="hero-meta-row">
+        <span class="hero-meta-label">Avg. Response</span>
+        <span class="hero-meta-value" id="hero-latency">12 ms</span>
+      </div>
+      <div class="hero-meta-row">
+        <span class="hero-meta-label">System Status</span>
+        <span class="hero-meta-value live">Nominal</span>
+      </div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#intelligence" class="btn-primary" id="hero-cta-explore">Explore Platform</a>
+      <a href="#operations" class="btn-ghost" id="hero-cta-demo">View Live Demo</a>
+    </div>
+
+    <div class="hero-coordinate">
+      COORD — 48.8566°N / 2.3522°E — OQENTRA.SYS — v4.2.1
+    </div>
+  </div>
+
+  <!-- RIGHT: Interactive Visualization -->
+  <div class="hero-right">
+    <svg id="hero-visualization" viewBox="0 0 700 700" xmlns="http://www.w3.org/2000/svg" aria-label="Connected infrastructure visualization">
+      <!-- Background grid -->
+      <defs>
+        <pattern id="grid-sm" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(248,244,236,0.04)" stroke-width="0.5"/>
+        </pattern>
+        <pattern id="grid-lg" x="0" y="0" width="120" height="120" patternUnits="userSpaceOnUse">
+          <rect width="120" height="120" fill="none" stroke="rgba(184,115,51,0.06)" stroke-width="0.5"/>
+        </pattern>
+        <filter id="glow-copper">
+          <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+          <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="glow-soft">
+          <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+          <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <linearGradient id="path-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#B87333" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#B87333" stop-opacity="0.8"/>
+          <stop offset="100%" stop-color="#B87333" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="path-grad-v" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="#B87333" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#B87333" stop-opacity="0.6"/>
+          <stop offset="100%" stop-color="#B87333" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+
+      <rect width="700" height="700" fill="url(#grid-sm)"/>
+      <rect width="700" height="700" fill="url(#grid-lg)"/>
+
+      <!-- Cross-hairs / measurement lines -->
+      <line x1="0" y1="350" x2="700" y2="350" stroke="rgba(184,115,51,0.1)" stroke-width="0.5"/>
+      <line x1="350" y1="0" x2="350" y2="700" stroke="rgba(184,115,51,0.1)" stroke-width="0.5"/>
+
+      <!-- Measurement tick marks -->
+      <g stroke="rgba(184,115,51,0.25)" stroke-width="0.5" fill="none">
+        <line x1="120" y1="346" x2="120" y2="354"/>
+        <line x1="240" y1="346" x2="240" y2="354"/>
+        <line x1="480" y1="346" x2="480" y2="354"/>
+        <line x1="580" y1="346" x2="580" y2="354"/>
+        <line x1="346" y1="120" x2="354" y2="120"/>
+        <line x1="346" y1="220" x2="354" y2="220"/>
+        <line x1="346" y1="460" x2="354" y2="460"/>
+        <line x1="346" y1="580" x2="354" y2="580"/>
+      </g>
+
+      <!-- Coordinate labels -->
+      <text x="122" y="344" font-family="DM Mono" font-size="8" fill="rgba(184,115,51,0.5)" letter-spacing="1">120</text>
+      <text x="476" y="344" font-family="DM Mono" font-size="8" fill="rgba(184,115,51,0.5)" letter-spacing="1">480</text>
+      <text x="358" y="124" font-family="DM Mono" font-size="8" fill="rgba(184,115,51,0.5)" letter-spacing="1">120</text>
+      <text x="358" y="464" font-family="DM Mono" font-size="8" fill="rgba(184,115,51,0.5)" letter-spacing="1">460</text>
+
+      <!-- Infrastructure connection paths (static backbone) -->
+      <g id="infra-paths" fill="none" stroke-width="0.75">
+        <!-- Primary backbone -->
+        <path d="M 350 350 L 180 200" stroke="rgba(184,115,51,0.2)"/>
+        <path d="M 350 350 L 520 200" stroke="rgba(184,115,51,0.2)"/>
+        <path d="M 350 350 L 180 500" stroke="rgba(184,115,51,0.2)"/>
+        <path d="M 350 350 L 520 500" stroke="rgba(184,115,51,0.2)"/>
+        <!-- Secondary connections -->
+        <path d="M 180 200 L 90 130" stroke="rgba(248,244,236,0.07)"/>
+        <path d="M 180 200 L 280 100" stroke="rgba(248,244,236,0.07)"/>
+        <path d="M 520 200 L 620 130" stroke="rgba(248,244,236,0.07)"/>
+        <path d="M 520 200 L 430 100" stroke="rgba(248,244,236,0.07)"/>
+        <path d="M 180 500 L 90 580" stroke="rgba(248,244,236,0.07)"/>
+        <path d="M 180 500 L 280 580" stroke="rgba(248,244,236,0.07)"/>
+        <path d="M 520 500 L 620 580" stroke="rgba(248,244,236,0.07)"/>
+        <path d="M 520 500 L 430 580" stroke="rgba(248,244,236,0.07)"/>
+        <!-- Cross links -->
+        <path d="M 180 200 L 520 200" stroke="rgba(248,244,236,0.05)"/>
+        <path d="M 180 500 L 520 500" stroke="rgba(248,244,236,0.05)"/>
+        <path d="M 180 200 L 180 500" stroke="rgba(248,244,236,0.05)"/>
+        <path d="M 520 200 L 520 500" stroke="rgba(248,244,236,0.05)"/>
+      </g>
+
+      <!-- Animated data packets -->
+      <g id="data-packets">
+        <circle r="2.5" fill="#B87333" opacity="0">
+          <animateMotion dur="3.2s" repeatCount="indefinite" begin="0s">
+            <mpath href="#path-anim-1"/>
+          </animateMotion>
+          <animate attributeName="opacity" values="0;1;1;0" dur="3.2s" repeatCount="indefinite" begin="0s"/>
+        </circle>
+        <circle r="2" fill="#D49A5A" opacity="0">
+          <animateMotion dur="2.8s" repeatCount="indefinite" begin="1s">
+            <mpath href="#path-anim-2"/>
+          </animateMotion>
+          <animate attributeName="opacity" values="0;0.8;0.8;0" dur="2.8s" repeatCount="indefinite" begin="1s"/>
+        </circle>
+        <circle r="2" fill="#C8823E" opacity="0">
+          <animateMotion dur="3.5s" repeatCount="indefinite" begin="0.5s">
+            <mpath href="#path-anim-3"/>
+          </animateMotion>
+          <animate attributeName="opacity" values="0;0.9;0.9;0" dur="3.5s" repeatCount="indefinite" begin="0.5s"/>
+        </circle>
+        <circle r="1.8" fill="#E8A840" opacity="0">
+          <animateMotion dur="2.4s" repeatCount="indefinite" begin="1.8s">
+            <mpath href="#path-anim-4"/>
+          </animateMotion>
+          <animate attributeName="opacity" values="0;0.7;0.7;0" dur="2.4s" repeatCount="indefinite" begin="1.8s"/>
+        </circle>
+        <circle r="2.2" fill="#B87333" opacity="0">
+          <animateMotion dur="4s" repeatCount="indefinite" begin="2.2s">
+            <mpath href="#path-anim-5"/>
+          </animateMotion>
+          <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite" begin="2.2s"/>
+        </circle>
+      </g>
+
+      <!-- Hidden motion paths -->
+      <defs>
+        <path id="path-anim-1" d="M 180 200 L 350 350 L 520 500"/>
+        <path id="path-anim-2" d="M 520 200 L 350 350 L 180 500"/>
+        <path id="path-anim-3" d="M 90 130 L 180 200 L 350 350"/>
+        <path id="path-anim-4" d="M 350 350 L 430 100"/>
+        <path id="path-anim-5" d="M 180 500 L 350 350 L 620 130"/>
+      </defs>
+
+      <!-- PRIMARY HUB — Center -->
+      <g id="hub-center" class="viz-node" data-id="center" style="cursor:pointer">
+        <circle cx="350" cy="350" r="28" fill="rgba(184,115,51,0.08)" stroke="rgba(184,115,51,0.25)" stroke-width="1"/>
+        <circle cx="350" cy="350" r="18" fill="rgba(184,115,51,0.12)" stroke="rgba(184,115,51,0.5)" stroke-width="1"/>
+        <circle cx="350" cy="350" r="6" fill="#B87333" filter="url(#glow-copper)">
+          <animate attributeName="r" values="5;8;5" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Expanding ring -->
+        <circle cx="350" cy="350" r="6" fill="none" stroke="#B87333" stroke-width="1" opacity="0.6">
+          <animate attributeName="r" values="6;35;6" dur="4s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.6;0;0.6" dur="4s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Label -->
+        <text x="350" y="393" text-anchor="middle" font-family="DM Mono" font-size="8" fill="rgba(248,244,236,0.7)" letter-spacing="2">CORE — HUB.01</text>
+      </g>
+
+      <!-- Secondary nodes -->
+      <!-- Node NW -->
+      <g id="hub-nw" class="viz-node" data-id="nw" style="cursor:pointer">
+        <polygon points="180,185 195,177 195,191" fill="rgba(184,115,51,0.06)" stroke="rgba(184,115,51,0.3)" stroke-width="0.75"/>
+        <circle cx="180" cy="200" r="14" fill="rgba(42,27,53,0.4)" stroke="rgba(184,115,51,0.35)" stroke-width="0.75"/>
+        <circle cx="180" cy="200" r="5" fill="#C8823E">
+          <animate attributeName="r" values="4;6;4" dur="2.5s" repeatCount="indefinite" begin="0.5s"/>
+        </circle>
+        <text x="135" y="196" text-anchor="end" font-family="DM Mono" font-size="7.5" fill="rgba(184,115,51,0.7)" letter-spacing="1.5">PLANT.02</text>
+        <text x="135" y="207" text-anchor="end" font-family="DM Mono" font-size="6" fill="rgba(248,244,236,0.35)" letter-spacing="1">INDUSTRIAL</text>
+      </g>
+
+      <!-- Node NE -->
+      <g id="hub-ne" class="viz-node" data-id="ne" style="cursor:pointer">
+        <circle cx="520" cy="200" r="14" fill="rgba(42,27,53,0.4)" stroke="rgba(184,115,51,0.35)" stroke-width="0.75"/>
+        <circle cx="520" cy="200" r="5" fill="#C8823E">
+          <animate attributeName="r" values="4;6;4" dur="2.8s" repeatCount="indefinite" begin="1s"/>
+        </circle>
+        <text x="538" y="196" text-anchor="start" font-family="DM Mono" font-size="7.5" fill="rgba(184,115,51,0.7)" letter-spacing="1.5">GRID.07</text>
+        <text x="538" y="207" text-anchor="start" font-family="DM Mono" font-size="6" fill="rgba(248,244,236,0.35)" letter-spacing="1">ENERGY</text>
+      </g>
+
+      <!-- Node SW -->
+      <g id="hub-sw" class="viz-node" data-id="sw" style="cursor:pointer">
+        <circle cx="180" cy="500" r="14" fill="rgba(42,27,53,0.4)" stroke="rgba(184,115,51,0.35)" stroke-width="0.75"/>
+        <circle cx="180" cy="500" r="5" fill="#C8823E">
+          <animate attributeName="r" values="4;6;4" dur="3.1s" repeatCount="indefinite" begin="0.8s"/>
+        </circle>
+        <text x="135" y="496" text-anchor="end" font-family="DM Mono" font-size="7.5" fill="rgba(184,115,51,0.7)" letter-spacing="1.5">FLEET.11</text>
+        <text x="135" y="507" text-anchor="end" font-family="DM Mono" font-size="6" fill="rgba(248,244,236,0.35)" letter-spacing="1">LOGISTICS</text>
+      </g>
+
+      <!-- Node SE -->
+      <g id="hub-se" class="viz-node" data-id="se" style="cursor:pointer">
+        <circle cx="520" cy="500" r="14" fill="rgba(42,27,53,0.4)" stroke="rgba(184,115,51,0.35)" stroke-width="0.75"/>
+        <!-- Alert pulse on SE -->
+        <circle cx="520" cy="500" r="5" fill="#E8A840">
+          <animate attributeName="r" values="4;7;4" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="520" cy="500" r="5" fill="none" stroke="#E8A840" stroke-width="1" opacity="0.5">
+          <animate attributeName="r" values="5;20;5" dur="1.5s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.5;0;0.5" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <text x="538" y="496" text-anchor="start" font-family="DM Mono" font-size="7.5" fill="#E8A840" letter-spacing="1.5">SENS.09 !</text>
+        <text x="538" y="507" text-anchor="start" font-family="DM Mono" font-size="6" fill="rgba(232,168,64,0.5)" letter-spacing="1">THRESHOLD</text>
+      </g>
+
+      <!-- Tertiary sensor nodes -->
+      <g id="tertiary-nodes" fill="rgba(248,244,236,0.6)" stroke="rgba(184,115,51,0.3)" stroke-width="0.5">
+        <circle cx="90" cy="130" r="4"><animate attributeName="r" values="3;5;3" dur="4s" repeatCount="indefinite" begin="0.2s"/></circle>
+        <circle cx="280" cy="100" r="3.5"><animate attributeName="r" values="2.5;4.5;2.5" dur="3.5s" repeatCount="indefinite" begin="0.7s"/></circle>
+        <circle cx="430" cy="100" r="3.5"><animate attributeName="r" values="2.5;4.5;2.5" dur="3.8s" repeatCount="indefinite" begin="1.2s"/></circle>
+        <circle cx="620" cy="130" r="4"><animate attributeName="r" values="3;5;3" dur="4.2s" repeatCount="indefinite" begin="0.4s"/></circle>
+        <circle cx="90" cy="580" r="4"><animate attributeName="r" values="3;5;3" dur="3.6s" repeatCount="indefinite" begin="0.9s"/></circle>
+        <circle cx="280" cy="580" r="3.5"><animate attributeName="r" values="2.5;4.5;2.5" dur="4s" repeatCount="indefinite" begin="1.5s"/></circle>
+        <circle cx="430" cy="580" r="3.5"><animate attributeName="r" values="2.5;4.5;2.5" dur="3.3s" repeatCount="indefinite" begin="0.3s"/></circle>
+        <circle cx="620" cy="580" r="4"><animate attributeName="r" values="3;5;3" dur="4.5s" repeatCount="indefinite" begin="1.1s"/></circle>
+      </g>
+
+      <!-- Tertiary node labels -->
+      <g font-family="DM Mono" font-size="6.5" fill="rgba(248,244,236,0.3)" letter-spacing="1">
+        <text x="92" y="122">S.01</text>
+        <text x="272" y="92">S.02</text>
+        <text x="422" y="92">S.03</text>
+        <text x="612" y="122">S.04</text>
+        <text x="92" y="598">S.05</text>
+        <text x="272" y="598">S.06</text>
+        <text x="422" y="598">S.07</text>
+        <text x="612" y="598">S.08</text>
+      </g>
+
+      <!-- Corner brackets -->
+      <g stroke="rgba(184,115,51,0.25)" stroke-width="0.75" fill="none">
+        <path d="M 20 20 L 20 50 M 20 20 L 50 20"/>
+        <path d="M 680 20 L 680 50 M 680 20 L 650 20"/>
+        <path d="M 20 680 L 20 650 M 20 680 L 50 680"/>
+        <path d="M 680 680 L 680 650 M 680 680 L 650 680"/>
+      </g>
+
+      <!-- System data readouts -->
+      <g font-family="DM Mono" fill="rgba(184,115,51,0.55)" letter-spacing="1.5">
+        <text x="28" y="38" font-size="7">SYS.MAP — REV.4</text>
+        <text x="28" y="52" font-size="6" fill="rgba(248,244,236,0.3)">LIVE TOPOLOGY</text>
+      </g>
+      <text x="672" y="38" text-anchor="end" font-family="DM Mono" font-size="7" fill="rgba(184,115,51,0.55)" letter-spacing="1.5">OQENTRA.NET</text>
+      <text x="672" y="52" text-anchor="end" font-family="DM Mono" font-size="6" fill="rgba(248,244,236,0.3)" letter-spacing="1">48,291 NODES</text>
+    </svg>
+
+    <!-- Floating labels -->
+    <div class="hero-viz-label" style="top:8%;left:6%" aria-hidden="true">Industrial Sensors</div>
+    <div class="hero-viz-label" style="top:8%;right:6%" aria-hidden="true">Energy Grid</div>
+    <div class="hero-viz-label" style="bottom:12%;left:6%" aria-hidden="true">Fleet Network</div>
+    <div class="hero-viz-label" style="bottom:12%;right:5%;color:#E8A840;border-left-color:#E8A840;" aria-hidden="true">⚠ Threshold Alert</div>
+  </div>
+
+</section>
+
+
+<!-- ============================================================
+     SIGNAL STRIP
+     ============================================================ -->
+<div class="signal-strip" role="marquee" aria-label="Live system metrics">
+  <div class="signal-strip-inner" id="signal-strip">
+    <!-- Items duplicated for seamless loop -->
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>PLANT.02 TEMPERATURE</span>
+      <span class="value" id="strip-temp">82.4°C</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>GRID.07 POWER DRAW</span>
+      <span class="value">1.84 MW</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>FLEET.11 VEHICLES</span>
+      <span class="value">247 ACTIVE</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>SENS.09 VIBRATION</span>
+      <span class="value status-alert" id="strip-vibration">HIGH — 4.8g</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>SYSTEM LATENCY</span>
+      <span class="value" id="strip-latency">12 ms</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>DATA THROUGHPUT</span>
+      <span class="value">1.4M EVENTS/SEC</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>UPTIME</span>
+      <span class="value status-ok">99.97%</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>ACTIVE ALERTS</span>
+      <span class="value status-alert">3 CRITICAL</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>AUTOMATION TASKS</span>
+      <span class="value">14,820 / DAY</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>CO₂ SAVED</span>
+      <span class="value status-ok">2,841 T</span>
+    </div>
+    <!-- Duplicate for loop -->
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>PLANT.02 TEMPERATURE</span>
+      <span class="value">82.4°C</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>GRID.07 POWER DRAW</span>
+      <span class="value">1.84 MW</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>FLEET.11 VEHICLES</span>
+      <span class="value">247 ACTIVE</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>SENS.09 VIBRATION</span>
+      <span class="value status-alert">HIGH — 4.8g</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>SYSTEM LATENCY</span>
+      <span class="value">12 ms</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>DATA THROUGHPUT</span>
+      <span class="value">1.4M EVENTS/SEC</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>UPTIME</span>
+      <span class="value status-ok">99.97%</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>ACTIVE ALERTS</span>
+      <span class="value status-alert">3 CRITICAL</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>AUTOMATION TASKS</span>
+      <span class="value">14,820 / DAY</span>
+    </div>
+    <div class="signal-strip-item">
+      <span class="signal-strip-dot"></span>
+      <span>CO₂ SAVED</span>
+      <span class="value status-ok">2,841 T</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     CONNECTED INTELLIGENCE
+     ============================================================ -->
+<section class="section-ci" id="intelligence" aria-label="Connected Intelligence section">
+
+  <div class="ci-header animate-on-scroll">
+    <div>
+      <div class="ci-number">01 / 05</div>
+      <div class="ci-section-label">Connected Intelligence</div>
+    </div>
+    <div>
+      <h2 class="ci-statement">
+        Infrastructure that <em>thinks</em>,<br />
+        systems that <em>act</em>.
+      </h2>
+      <div style="margin-top:2rem;display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+        <p class="ci-para">
+          OQENTRA unifies physical environments with intelligent data systems. Every sensor, machine, and gateway becomes a contributing node in a living network that continuously perceives, learns, and responds.
+        </p>
+        <p class="ci-para">
+          Unlike conventional telemetry platforms, OQENTRA's Connected Intelligence layer transforms raw signal data into actionable operational intelligence — delivered in real time, with sub-20ms latency across distributed deployments.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Infrastructure Map Visualization -->
+  <div class="ci-visualization animate-on-scroll">
+    <svg id="infra-map" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" aria-label="OQENTRA Infrastructure Map">
+      <defs>
+        <pattern id="ci-grid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+          <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(248,244,236,0.1)" stroke-width="0.5"/>
+        </pattern>
+        <filter id="ci-glow">
+          <feGaussianBlur stdDeviation="4" result="blur"/>
+          <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <rect width="1200" height="560" fill="url(#ci-grid)"/>
+
+      <!-- Horizontal and vertical rulers -->
+      <line x1="0" y1="280" x2="1200" y2="280" stroke="rgba(184,115,51,0.08)" stroke-width="0.5" stroke-dasharray="4,12"/>
+      <line x1="600" y1="0" x2="600" y2="560" stroke="rgba(184,115,51,0.08)" stroke-width="0.5" stroke-dasharray="4,12"/>
+
+      <!-- Primary infrastructure paths -->
+      <g fill="none" stroke-width="0.8">
+        <!-- Main horizontal backbone -->
+        <path d="M 80 280 L 220 280 L 280 200 L 400 200 L 460 280 L 600 280 L 660 200 L 800 200 L 860 280 L 1000 280 L 1060 200 L 1160 200" stroke="rgba(184,115,51,0.25)"/>
+        <!-- Bottom branch -->
+        <path d="M 80 280 L 220 280 L 280 360 L 400 360 L 460 280" stroke="rgba(184,115,51,0.15)"/>
+        <path d="M 600 280 L 660 360 L 800 360 L 860 280" stroke="rgba(184,115,51,0.15)"/>
+        <path d="M 1000 280 L 1060 360 L 1160 360" stroke="rgba(184,115,51,0.15)"/>
+        <!-- Vertical connectors -->
+        <path d="M 280 200 L 280 360" stroke="rgba(184,115,51,0.1)" stroke-dasharray="3,6"/>
+        <path d="M 800 200 L 800 360" stroke="rgba(184,115,51,0.1)" stroke-dasharray="3,6"/>
+        <path d="M 400 200 L 400 360" stroke="rgba(248,244,236,0.05)" stroke-dasharray="3,8"/>
+        <path d="M 660 200 L 660 360" stroke="rgba(248,244,236,0.05)" stroke-dasharray="3,8"/>
+        <path d="M 1060 200 L 1060 360" stroke="rgba(248,244,236,0.05)" stroke-dasharray="3,8"/>
+        <!-- Cross links upper tier -->
+        <path d="M 400 200 L 400 80 L 600 80 L 600 280" stroke="rgba(248,244,236,0.05)"/>
+        <path d="M 800 200 L 800 80 L 1000 80 L 1000 280" stroke="rgba(248,244,236,0.04)"/>
+      </g>
+
+      <!-- Animated data packets on backbone -->
+      <circle r="3" fill="#B87333" opacity="0">
+        <animateMotion dur="5s" repeatCount="indefinite" begin="0s" path="M 80 280 L 220 280 L 280 200 L 400 200 L 460 280 L 600 280 L 660 200 L 800 200 L 860 280 L 1000 280 L 1060 200 L 1160 200"/>
+        <animate attributeName="opacity" values="0;1;1;0" dur="5s" repeatCount="indefinite" begin="0s"/>
+      </circle>
+      <circle r="2.5" fill="#D49A5A" opacity="0">
+        <animateMotion dur="5s" repeatCount="indefinite" begin="1.5s" path="M 80 280 L 220 280 L 280 200 L 400 200 L 460 280 L 600 280 L 660 200 L 800 200 L 860 280 L 1000 280 L 1060 200 L 1160 200"/>
+        <animate attributeName="opacity" values="0;0.8;0.8;0" dur="5s" repeatCount="indefinite" begin="1.5s"/>
+      </circle>
+      <circle r="2" fill="#E8A840" opacity="0">
+        <animateMotion dur="4s" repeatCount="indefinite" begin="0.8s" path="M 80 280 L 220 280 L 280 360 L 400 360 L 460 280 L 600 280 L 660 360 L 800 360 L 860 280"/>
+        <animate attributeName="opacity" values="0;0.9;0.9;0" dur="4s" repeatCount="indefinite" begin="0.8s"/>
+      </circle>
+
+      <!-- Node definitions — hubs, machines, sensors -->
+      <!-- Hub nodes (larger) -->
+      <g class="ci-hub-node" style="cursor:pointer">
+        <!-- Hub at 460,280 -->
+        <circle cx="460" cy="280" r="22" fill="rgba(184,115,51,0.08)" stroke="rgba(184,115,51,0.3)" stroke-width="1"/>
+        <circle cx="460" cy="280" r="8" fill="#B87333" filter="url(#ci-glow)">
+          <animate attributeName="r" values="7;10;7" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="460" cy="280" r="8" fill="none" stroke="#B87333" stroke-width="0.8" opacity="0.4">
+          <animate attributeName="r" values="8;28;8" dur="3s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.4;0;0.4" dur="3s" repeatCount="indefinite"/>
+        </circle>
+        <text x="460" y="316" text-anchor="middle" font-family="DM Mono" font-size="10" fill="rgba(184,115,51,0.8)" letter-spacing="1.5">HUB — WEST</text>
+      </g>
+
+      <g class="ci-hub-node" style="cursor:pointer">
+        <circle cx="860" cy="280" r="22" fill="rgba(184,115,51,0.08)" stroke="rgba(184,115,51,0.3)" stroke-width="1"/>
+        <circle cx="860" cy="280" r="8" fill="#B87333" filter="url(#ci-glow)">
+          <animate attributeName="r" values="7;10;7" dur="3.5s" repeatCount="indefinite" begin="1s"/>
+        </circle>
+        <circle cx="860" cy="280" r="8" fill="none" stroke="#B87333" stroke-width="0.8" opacity="0.4">
+          <animate attributeName="r" values="8;28;8" dur="3.5s" repeatCount="indefinite" begin="1s"/>
+          <animate attributeName="opacity" values="0.4;0;0.4" dur="3.5s" repeatCount="indefinite" begin="1s"/>
+        </circle>
+        <text x="860" y="316" text-anchor="middle" font-family="DM Mono" font-size="10" fill="rgba(184,115,51,0.8)" letter-spacing="1.5">HUB — CENTRAL</text>
+      </g>
+
+      <!-- Machine nodes (medium) -->
+      <g class="ci-machine-node" style="cursor:pointer">
+        <rect x="270" y="190" width="20" height="20" rx="0" fill="rgba(42,27,53,0.5)" stroke="rgba(184,115,51,0.4)" stroke-width="0.75" transform="rotate(45 280 200)"/>
+        <text x="280" y="175" text-anchor="middle" font-family="DM Mono" font-size="9.5" fill="rgba(248,244,236,0.5)" letter-spacing="1">M.01</text>
+      </g>
+
+      <g class="ci-machine-node" style="cursor:pointer">
+        <rect x="390" y="190" width="20" height="20" rx="0" fill="rgba(42,27,53,0.5)" stroke="rgba(184,115,51,0.4)" stroke-width="0.75" transform="rotate(45 400 200)"/>
+        <text x="400" y="175" text-anchor="middle" font-family="DM Mono" font-size="9.5" fill="rgba(248,244,236,0.5)" letter-spacing="1">M.02</text>
+      </g>
+
+      <g class="ci-machine-node" style="cursor:pointer">
+        <rect x="650" y="190" width="20" height="20" rx="0" fill="rgba(42,27,53,0.5)" stroke="rgba(184,115,51,0.4)" stroke-width="0.75" transform="rotate(45 660 200)"/>
+        <text x="660" y="175" text-anchor="middle" font-family="DM Mono" font-size="9.5" fill="rgba(248,244,236,0.5)" letter-spacing="1">M.03</text>
+      </g>
+
+      <g class="ci-machine-node" style="cursor:pointer">
+        <rect x="790" y="190" width="20" height="20" rx="0" fill="rgba(42,27,53,0.5)" stroke="rgba(184,115,51,0.4)" stroke-width="0.75" transform="rotate(45 800 200)"/>
+        <text x="800" y="175" text-anchor="middle" font-family="DM Mono" font-size="9.5" fill="rgba(248,244,236,0.5)" letter-spacing="1">M.04</text>
+      </g>
+
+      <!-- Sensor nodes (small) -->
+      <g fill="rgba(184,115,51,0.7)" stroke="none">
+        <circle cx="280" cy="360" r="4"><animate attributeName="opacity" values="0.7;1;0.7" dur="2.5s" repeatCount="indefinite"/></circle>
+        <circle cx="400" cy="360" r="4"><animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite" begin="0.5s"/></circle>
+        <circle cx="660" cy="360" r="4"><animate attributeName="opacity" values="0.7;1;0.7" dur="2.8s" repeatCount="indefinite" begin="1s"/></circle>
+        <circle cx="800" cy="360" r="4"><animate attributeName="opacity" values="0.7;1;0.7" dur="3.2s" repeatCount="indefinite" begin="0.3s"/></circle>
+        <circle cx="1060" cy="200" r="4"><animate attributeName="opacity" values="0.7;1;0.7" dur="2.3s" repeatCount="indefinite" begin="1.2s"/></circle>
+        <circle cx="1060" cy="360" r="4"><animate attributeName="opacity" values="0.7;1;0.7" dur="2.6s" repeatCount="indefinite" begin="0.8s"/></circle>
+        <circle cx="80" cy="280" r="5" fill="rgba(232,168,64,0.8)"><animate attributeName="opacity" values="0.8;1;0.8" dur="1.8s" repeatCount="indefinite"/></circle>
+        <circle cx="1160" cy="200" r="4"><animate attributeName="opacity" values="0.7;1;0.7" dur="2.9s" repeatCount="indefinite" begin="0.6s"/></circle>
+        <circle cx="1160" cy="360" r="4"><animate attributeName="opacity" values="0.7;1;0.7" dur="3.1s" repeatCount="indefinite" begin="1.4s"/></circle>
+      </g>
+
+      <!-- Sensor labels -->
+      <g font-family="DM Mono" font-size="9" fill="rgba(248,244,236,0.3)" letter-spacing="1">
+        <text x="82" y="272">INPUT</text>
+        <text x="272" y="378">S.A</text>
+        <text x="392" y="378">S.B</text>
+        <text x="652" y="378">S.C</text>
+        <text x="792" y="378">S.D</text>
+        <text x="1052" y="218">S.E</text>
+        <text x="1052" y="378">S.F</text>
+        <text x="1152" y="218">S.G</text>
+        <text x="1152" y="378">S.H</text>
+      </g>
+
+      <!-- Corner frame -->
+      <g stroke="rgba(184,115,51,0.2)" stroke-width="0.75" fill="none">
+        <path d="M 16 16 L 16 36 M 16 16 L 36 16"/>
+        <path d="M 1184 16 L 1184 36 M 1184 16 L 1164 16"/>
+        <path d="M 16 544 L 16 524 M 16 544 L 36 544"/>
+        <path d="M 1184 544 L 1184 524 M 1184 544 L 1164 544"/>
+      </g>
+
+      <!-- System info -->
+      <text x="26" y="32" font-family="DM Mono" font-size="10" fill="rgba(184,115,51,0.6)" letter-spacing="2">OQENTRA — CONNECTED INFRASTRUCTURE MAP — LIVE</text>
+      <text x="1174" y="558" text-anchor="end" font-family="DM Mono" font-size="9" fill="rgba(248,244,236,0.2)" letter-spacing="1">REV.4.2.1 — 48,291 NODES ACTIVE</text>
+    </svg>
+  </div>
+
+  <!-- Stats row -->
+  <div class="ci-stat-row animate-on-scroll">
+    <div class="ci-stat">
+      <div class="ci-stat-number"><span id="stat-nodes">48</span>K<span>+</span></div>
+      <div class="ci-stat-label">Active Nodes Globally</div>
+    </div>
+    <div class="ci-stat">
+      <div class="ci-stat-number"><span id="stat-latency">12</span><span style="font-size:1.2rem">ms</span></div>
+      <div class="ci-stat-label">Average System Latency</div>
+    </div>
+    <div class="ci-stat">
+      <div class="ci-stat-number">99.<span id="stat-uptime">97</span><span>%</span></div>
+      <div class="ci-stat-label">Platform Uptime SLA</div>
+    </div>
+    <div class="ci-stat">
+      <div class="ci-stat-number">1.4<span>M</span></div>
+      <div class="ci-stat-label">Events Processed / Second</div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ============================================================
+     REAL-TIME OPERATIONS
+     ============================================================ -->
+<section class="section-ops" id="operations" aria-label="Real-time Operations">
+
+  <div class="ops-header">
+    <div>
+      <div class="ci-number">02 / 05</div>
+      <div style="margin-bottom:0.75rem"><span class="label-tag">Real-Time Operations</span></div>
+      <h2 class="t-editorial-md">Enterprise monitoring<br/><em style="font-style:italic;color:var(--copper-light)">without compromise.</em></h2>
+    </div>
+    <div class="ops-status-bar">
+      <div class="ops-status-item"><div class="ops-status-dot nominal"></div>Systems Nominal</div>
+      <div class="ops-status-item"><div class="ops-status-dot alert"></div>3 Critical Alerts</div>
+      <div class="ops-status-item"><div class="ops-status-dot"></div>Live — <span id="ops-timestamp" style="margin-left:4px">00:00:00</span></div>
+    </div>
+  </div>
+
+  <div class="ops-grid">
+
+    <!-- Left: Machine List -->
+    <div class="ops-panel-left">
+      <div class="ops-panel-title">System Nodes</div>
+      <div class="ops-machine-list">
+        <div class="ops-machine active" id="machine-1" role="button" tabindex="0">
+          <div class="ops-machine-header">
+            <span class="ops-machine-name">PRESS.LINE.A1</span>
+            <span class="ops-machine-badge badge-online">ONLINE</span>
+          </div>
+          <div class="ops-machine-meta">
+            <span class="ops-machine-stat">Temp <b id="m1-temp">82°C</b></span>
+            <span class="ops-machine-stat">Load <b>91%</b></span>
+            <span class="ops-machine-stat">Cycles <b>14,820</b></span>
+          </div>
+        </div>
+        <div class="ops-machine" id="machine-2" role="button" tabindex="0">
+          <div class="ops-machine-header">
+            <span class="ops-machine-name">COMP.UNIT.B4</span>
+            <span class="ops-machine-badge badge-warning">WARN</span>
+          </div>
+          <div class="ops-machine-meta">
+            <span class="ops-machine-stat">Temp <b id="m2-temp">96°C</b></span>
+            <span class="ops-machine-stat">Load <b>78%</b></span>
+            <span class="ops-machine-stat">Vibration <b id="m2-vib">3.2g</b></span>
+          </div>
+        </div>
+        <div class="ops-machine" id="machine-3" role="button" tabindex="0">
+          <div class="ops-machine-header">
+            <span class="ops-machine-name">PUMP.STATION.7</span>
+            <span class="ops-machine-badge badge-online">ONLINE</span>
+          </div>
+          <div class="ops-machine-meta">
+            <span class="ops-machine-stat">Flow <b>240 L/m</b></span>
+            <span class="ops-machine-stat">Press <b>4.2 bar</b></span>
+          </div>
+        </div>
+        <div class="ops-machine" id="machine-4" role="button" tabindex="0">
+          <div class="ops-machine-header">
+            <span class="ops-machine-name">SENS.ARRAY.09</span>
+            <span class="ops-machine-badge badge-alert">ALERT</span>
+          </div>
+          <div class="ops-machine-meta">
+            <span class="ops-machine-stat">Vibr <b id="m4-vib" style="color:#E85A40">4.8g</b></span>
+            <span class="ops-machine-stat">Temp <b>61°C</b></span>
+          </div>
+        </div>
+        <div class="ops-machine" id="machine-5" role="button" tabindex="0">
+          <div class="ops-machine-header">
+            <span class="ops-machine-name">GRID.INVERTER.3</span>
+            <span class="ops-machine-badge badge-online">ONLINE</span>
+          </div>
+          <div class="ops-machine-meta">
+            <span class="ops-machine-stat">Power <b>1.84 MW</b></span>
+            <span class="ops-machine-stat">Eff <b>97.4%</b></span>
+          </div>
+        </div>
+        <div class="ops-machine" id="machine-6" role="button" tabindex="0">
+          <div class="ops-machine-header">
+            <span class="ops-machine-name">HVAC.ZONE.02</span>
+            <span class="ops-machine-badge badge-online">ONLINE</span>
+          </div>
+          <div class="ops-machine-meta">
+            <span class="ops-machine-stat">Temp <b id="m6-temp">22°C</b></span>
+            <span class="ops-machine-stat">RH <b>48%</b></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center: Metrics + Feed -->
+    <div class="ops-panel-center">
+      <div class="ops-metric-grid">
+        <div class="ops-metric">
+          <div class="ops-metric-label">Facility Temperature</div>
+          <div class="ops-metric-value"><span id="metric-temp">82</span><span class="ops-metric-unit">°C</span></div>
+          <div class="ops-metric-delta up" id="metric-temp-delta">↑ +1.2° from avg</div>
+        </div>
+        <div class="ops-metric">
+          <div class="ops-metric-label">Power Consumption</div>
+          <div class="ops-metric-value"><span id="metric-power">1.84</span><span class="ops-metric-unit">MW</span></div>
+          <div class="ops-metric-delta down">↓ −0.06 from peak</div>
+        </div>
+        <div class="ops-metric">
+          <div class="ops-metric-label">System Latency</div>
+          <div class="ops-metric-value"><span id="metric-latency">12</span><span class="ops-metric-unit">ms</span></div>
+          <div class="ops-metric-delta up" style="color:var(--graphite-300)">↔ within SLA</div>
+        </div>
+        <div class="ops-metric">
+          <div class="ops-metric-label">Active Devices</div>
+          <div class="ops-metric-value"><span id="metric-devices">247</span><span class="ops-metric-unit"></span></div>
+          <div class="ops-metric-delta up">↑ +3 in last hour</div>
+        </div>
+        <div class="ops-metric">
+          <div class="ops-metric-label">Vibration (Max)</div>
+          <div class="ops-metric-value" style="color:#E85A40"><span id="metric-vibration">4.8</span><span class="ops-metric-unit">g</span></div>
+          <div class="ops-metric-delta down">⚠ Above threshold</div>
+        </div>
+        <div class="ops-metric">
+          <div class="ops-metric-label">Automation Rate</div>
+          <div class="ops-metric-value"><span id="metric-auto">96</span><span class="ops-metric-unit">%</span></div>
+          <div class="ops-metric-delta up">↑ Tasks automated</div>
+        </div>
+      </div>
+
+      <!-- Activity Feed -->
+      <div class="ops-activity">
+        <div class="ops-activity-title">Activity Stream</div>
+        <div class="ops-feed" id="ops-feed">
+          <div class="ops-feed-item">
+            <span class="ops-feed-time" id="feed-t1">11:52:14</span>
+            <span class="ops-feed-message">Vibration threshold exceeded on SENS.09 — maintenance alert dispatched</span>
+            <span class="ops-feed-source">ALERT.SYS</span>
+          </div>
+          <div class="ops-feed-item">
+            <span class="ops-feed-time">11:51:47</span>
+            <span class="ops-feed-message">COMP.UNIT.B4 temperature rising — cooling protocol activated</span>
+            <span class="ops-feed-source">AUTO.SYS</span>
+          </div>
+          <div class="ops-feed-item">
+            <span class="ops-feed-time">11:50:33</span>
+            <span class="ops-feed-message">FLEET.11 vehicle #A-092 entered geofence zone Warehouse C</span>
+            <span class="ops-feed-source">FLEET.SYS</span>
+          </div>
+          <div class="ops-feed-item">
+            <span class="ops-feed-time">11:49:18</span>
+            <span class="ops-feed-message">Energy optimization: GRID.07 load balanced across 3 sectors</span>
+            <span class="ops-feed-source">GRID.SYS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Gauges & Alerts -->
+    <div class="ops-panel-right">
+      <div class="ops-panel-title">Environment & Energy</div>
+      <div class="ops-gauge-group">
+        <div class="ops-gauge">
+          <div class="ops-gauge-header">
+            <span class="ops-gauge-name">Facility Temp</span>
+            <span class="ops-gauge-reading" id="gauge-temp">82.4°C</span>
+          </div>
+          <div class="ops-gauge-bar">
+            <div class="ops-gauge-fill" id="gauge-temp-fill" style="width:68%;background:var(--copper-mid)"></div>
+          </div>
+        </div>
+        <div class="ops-gauge">
+          <div class="ops-gauge-header">
+            <span class="ops-gauge-name">Humidity</span>
+            <span class="ops-gauge-reading">47.8%</span>
+          </div>
+          <div class="ops-gauge-bar">
+            <div class="ops-gauge-fill" style="width:48%"></div>
+          </div>
+        </div>
+        <div class="ops-gauge">
+          <div class="ops-gauge-header">
+            <span class="ops-gauge-name">Power Load</span>
+            <span class="ops-gauge-reading" id="gauge-power">1.84 MW</span>
+          </div>
+          <div class="ops-gauge-bar">
+            <div class="ops-gauge-fill" id="gauge-power-fill" style="width:74%"></div>
+          </div>
+        </div>
+        <div class="ops-gauge">
+          <div class="ops-gauge-header">
+            <span class="ops-gauge-name">Air Quality</span>
+            <span class="ops-gauge-reading">Good — 28 AQI</span>
+          </div>
+          <div class="ops-gauge-bar">
+            <div class="ops-gauge-fill" style="width:28%;background:var(--copper-light)"></div>
+          </div>
+        </div>
+        <div class="ops-gauge">
+          <div class="ops-gauge-header">
+            <span class="ops-gauge-name">Vibration (SENS.09)</span>
+            <span class="ops-gauge-reading" style="color:#E85A40">4.8g !</span>
+          </div>
+          <div class="ops-gauge-bar">
+            <div class="ops-gauge-fill" id="gauge-vib-fill" style="width:96%;background:#E85A40"></div>
+          </div>
+        </div>
+        <div class="ops-gauge">
+          <div class="ops-gauge-header">
+            <span class="ops-gauge-name">Network Bandwidth</span>
+            <span class="ops-gauge-reading">340 Mb/s</span>
+          </div>
+          <div class="ops-gauge-bar">
+            <div class="ops-gauge-fill" style="width:42%;background:var(--copper-dark)"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ops-alerts">
+        <div class="ops-panel-title">Active Alerts</div>
+        <div class="ops-alert-item">
+          <svg class="ops-alert-icon" viewBox="0 0 14 14" fill="none">
+            <path d="M7 1L13 12H1L7 1Z" stroke="#E85A40" stroke-width="1" fill="rgba(232,90,64,0.12)"/>
+            <line x1="7" y1="5" x2="7" y2="9" stroke="#E85A40" stroke-width="1"/>
+            <circle cx="7" cy="10.5" r="0.8" fill="#E85A40"/>
+          </svg>
+          <span class="ops-alert-text">SENS.09 vibration critical — 4.8g (limit 3.0g)</span>
+        </div>
+        <div class="ops-alert-item">
+          <svg class="ops-alert-icon" viewBox="0 0 14 14" fill="none">
+            <path d="M7 1L13 12H1L7 1Z" stroke="#E8A840" stroke-width="1" fill="rgba(232,168,64,0.1)"/>
+            <line x1="7" y1="5" x2="7" y2="9" stroke="#E8A840" stroke-width="1"/>
+            <circle cx="7" cy="10.5" r="0.8" fill="#E8A840"/>
+          </svg>
+          <span class="ops-alert-text">COMP.UNIT.B4 temperature warning — 96°C</span>
+        </div>
+        <div class="ops-alert-item">
+          <svg class="ops-alert-icon" viewBox="0 0 14 14" fill="none">
+            <path d="M7 1L13 12H1L7 1Z" stroke="#E8A840" stroke-width="1" fill="rgba(232,168,64,0.1)"/>
+            <line x1="7" y1="5" x2="7" y2="9" stroke="#E8A840" stroke-width="1"/>
+            <circle cx="7" cy="10.5" r="0.8" fill="#E8A840"/>
+          </svg>
+          <span class="ops-alert-text">PRESS.LINE.A1 scheduled maintenance overdue</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SYSTEM JOURNEY — Sense → Connect → Analyze → Decide → Automate
+     ============================================================ -->
+<section class="section-journey" id="journey" aria-label="System Journey">
+
+  <div class="journey-header animate-on-scroll">
+    <div>
+      <div class="ci-number">03 / 05</div>
+      <div class="ci-section-label">The Intelligence Loop</div>
+    </div>
+    <div>
+      <h2 class="ci-statement">
+        Five steps from <em>signal</em> to <em>action.</em>
+      </h2>
+    </div>
+  </div>
+
+  <div class="journey-nodes animate-on-scroll" role="list">
+    <!-- Horizontal connector line -->
+    <div class="journey-connector" aria-hidden="true"></div>
+    <div class="journey-connector-animated" aria-hidden="true"></div>
+
+    <!-- Node 1: Sense -->
+    <div class="journey-node" role="listitem" id="journey-sense">
+      <div class="journey-node-orb">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="14" cy="14" r="4" fill="#B87333"/>
+          <circle cx="14" cy="14" r="8" stroke="#B87333" stroke-width="0.75" opacity="0.5"/>
+          <circle cx="14" cy="14" r="12" stroke="#B87333" stroke-width="0.5" opacity="0.25"/>
+          <line x1="14" y1="2" x2="14" y2="6" stroke="#B87333" stroke-width="1" opacity="0.6"/>
+          <line x1="14" y1="22" x2="14" y2="26" stroke="#B87333" stroke-width="1" opacity="0.6"/>
+          <line x1="2" y1="14" x2="6" y2="14" stroke="#B87333" stroke-width="1" opacity="0.6"/>
+          <line x1="22" y1="14" x2="26" y2="14" stroke="#B87333" stroke-width="1" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="journey-node-step">Step 01</div>
+      <div class="journey-node-title">Sense</div>
+      <div class="journey-node-desc">Multi-protocol sensors capture environmental, mechanical, and process signals</div>
+    </div>
+
+    <!-- Node 2: Connect -->
+    <div class="journey-node" role="listitem" id="journey-connect">
+      <div class="journey-node-orb">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="8" cy="14" r="3" fill="#B87333"/>
+          <circle cx="20" cy="14" r="3" fill="#B87333"/>
+          <circle cx="14" cy="7" r="3" fill="#C8823E" opacity="0.7"/>
+          <line x1="8" y1="14" x2="20" y2="14" stroke="#B87333" stroke-width="0.75"/>
+          <line x1="8" y1="14" x2="14" y2="7" stroke="#B87333" stroke-width="0.75" opacity="0.6"/>
+          <line x1="20" y1="14" x2="14" y2="7" stroke="#B87333" stroke-width="0.75" opacity="0.6"/>
+        </svg>
+      </div>
+      <div class="journey-node-step">Step 02</div>
+      <div class="journey-node-title">Connect</div>
+      <div class="journey-node-desc">MQTT, OPC-UA, and private mesh networks unify all device communications</div>
+    </div>
+
+    <!-- Node 3: Analyze -->
+    <div class="journey-node" role="listitem" id="journey-analyze">
+      <div class="journey-node-orb">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 4 20 L 10 12 L 16 16 L 24 8" stroke="#B87333" stroke-width="1" fill="none"/>
+          <circle cx="10" cy="12" r="2" fill="#B87333" opacity="0.7"/>
+          <circle cx="16" cy="16" r="2" fill="#C8823E" opacity="0.7"/>
+          <circle cx="24" cy="8" r="2.5" fill="#B87333"/>
+          <line x1="4" y1="22" x2="26" y2="22" stroke="rgba(184,115,51,0.3)" stroke-width="0.5"/>
+          <line x1="4" y1="4" x2="4" y2="22" stroke="rgba(184,115,51,0.3)" stroke-width="0.5"/>
+        </svg>
+      </div>
+      <div class="journey-node-step">Step 03</div>
+      <div class="journey-node-title">Analyze</div>
+      <div class="journey-node-desc">Edge AI and cloud analytics detect patterns, anomalies, and predictive signals</div>
+    </div>
+
+    <!-- Node 4: Decide -->
+    <div class="journey-node" role="listitem" id="journey-decide">
+      <div class="journey-node-orb">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="9" y="9" width="10" height="10" stroke="#B87333" stroke-width="0.75" fill="rgba(184,115,51,0.1)" transform="rotate(45 14 14)"/>
+          <circle cx="14" cy="14" r="3" fill="#B87333"/>
+          <line x1="14" y1="3" x2="14" y2="8" stroke="#B87333" stroke-width="0.75" opacity="0.5"/>
+          <line x1="14" y1="20" x2="14" y2="25" stroke="#B87333" stroke-width="0.75" opacity="0.5"/>
+          <line x1="3" y1="14" x2="8" y2="14" stroke="#B87333" stroke-width="0.75" opacity="0.5"/>
+          <line x1="20" y1="14" x2="25" y2="14" stroke="#B87333" stroke-width="0.75" opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="journey-node-step">Step 04</div>
+      <div class="journey-node-title">Decide</div>
+      <div class="journey-node-desc">Rule engines and ML models generate optimal responses in real time</div>
+    </div>
+
+    <!-- Node 5: Automate -->
+    <div class="journey-node" role="listitem" id="journey-automate">
+      <div class="journey-node-orb">
+        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M 8 8 L 20 8 L 20 16 L 16 16 L 16 20 L 12 20 L 12 16 L 8 16 Z" stroke="#B87333" stroke-width="0.75" fill="rgba(184,115,51,0.1)"/>
+          <circle cx="11" cy="12" r="1.5" fill="#B87333"/>
+          <circle cx="17" cy="12" r="1.5" fill="#B87333"/>
+          <line x1="11" y1="7" x2="11" y2="8" stroke="#B87333" stroke-width="1"/>
+          <line x1="17" y1="7" x2="17" y2="8" stroke="#B87333" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="journey-node-step">Step 05</div>
+      <div class="journey-node-title">Automate</div>
+      <div class="journey-node-desc">Closed-loop commands execute across physical systems without human delay</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     INDUSTRIES
+     ============================================================ -->
+<section class="section-industries" id="industries" aria-label="Industries section">
+
+  <div class="industries-header animate-on-scroll">
+    <div>
+      <div class="ci-number">04 / 05</div>
+      <div class="ci-section-label">Industries</div>
+    </div>
+    <div style="max-width:42ch">
+      <h2 class="ci-statement">
+        Built for <em>every</em> critical environment.
+      </h2>
+      <p class="ci-para" style="margin-top:1rem">OQENTRA deploys across seven critical industry verticals, from high-temperature manufacturing floors to distributed energy infrastructure.</p>
+    </div>
+  </div>
+
+  <div class="industries-grid" id="industries-grid">
+
+    <!-- Large tile: Manufacturing -->
+    <div class="industry-tile" id="industry-manufacturing" role="article">
+      <img
+        src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=800&q=80&auto=format"
+        alt="Manufacturing facility with industrial machinery"
+        class="industry-tile-image"
+        loading="lazy"
+      />
+      <div class="industry-overlay"></div>
+      <div class="industry-hover-detail">82 installations<br/>14 countries</div>
+      <div class="industry-label">
+        <div class="industry-number">IND — 01</div>
+        <div class="industry-name">Advanced<br/>Manufacturing</div>
+        <div class="industry-tag">Predictive Maintenance · Quality Control · OEE</div>
+      </div>
+    </div>
+
+    <!-- Energy -->
+    <div class="industry-tile" id="industry-energy" role="article">
+      <img
+        src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?w=600&q=80&auto=format"
+        alt="Energy infrastructure and power grid"
+        class="industry-tile-image"
+        loading="lazy"
+      />
+      <div class="industry-overlay"></div>
+      <div class="industry-hover-detail">Grid balancing<br/>Real-time SCADA</div>
+      <div class="industry-label">
+        <div class="industry-number">IND — 02</div>
+        <div class="industry-name">Energy &<br/>Grid Systems</div>
+        <div class="industry-tag">Smart Grid · Renewables · Load Balancing</div>
+      </div>
+    </div>
+
+    <!-- Logistics -->
+    <div class="industry-tile" id="industry-logistics" role="article">
+      <img
+        src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80&auto=format"
+        alt="Logistics warehouse and fleet operations"
+        class="industry-tile-image"
+        loading="lazy"
+      />
+      <div class="industry-overlay"></div>
+      <div class="industry-hover-detail">Fleet tracking<br/>Route intelligence</div>
+      <div class="industry-label">
+        <div class="industry-number">IND — 03</div>
+        <div class="industry-name">Logistics &<br/>Supply Chain</div>
+        <div class="industry-tag">Fleet IoT · Cold Chain · Warehouse AI</div>
+      </div>
+    </div>
+
+    <!-- Water -->
+    <div class="industry-tile" id="industry-water" role="article">
+      <img
+        src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?w=600&q=80&auto=format"
+        alt="Water infrastructure management"
+        class="industry-tile-image"
+        loading="lazy"
+      />
+      <div class="industry-overlay"></div>
+      <div class="industry-hover-detail">Flow monitoring<br/>Leak detection</div>
+      <div class="industry-label">
+        <div class="industry-number">IND — 04</div>
+        <div class="industry-name">Water &<br/>Infrastructure</div>
+        <div class="industry-tag">SCADA · Flow Control · Leak Detection</div>
+      </div>
+    </div>
+
+    <!-- Smart Buildings -->
+    <div class="industry-tile" id="industry-buildings" role="article">
+      <img
+        src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80&auto=format"
+        alt="Smart building and facility management"
+        class="industry-tile-image"
+        loading="lazy"
+      />
+      <div class="industry-overlay"></div>
+      <div class="industry-hover-detail">BMS integration<br/>Energy optimization</div>
+      <div class="industry-label">
+        <div class="industry-number">IND — 05</div>
+        <div class="industry-name">Smart Buildings</div>
+        <div class="industry-tag">BMS · HVAC Control · Occupancy</div>
+      </div>
+    </div>
+
+    <!-- Agriculture -->
+    <div class="industry-tile" id="industry-agriculture" role="article">
+      <img
+        src="https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=600&q=80&auto=format"
+        alt="Smart agriculture precision farming"
+        class="industry-tile-image"
+        loading="lazy"
+      />
+      <div class="industry-overlay"></div>
+      <div class="industry-hover-detail">Soil & crop sensing<br/>Irrigation control</div>
+      <div class="industry-label">
+        <div class="industry-number">IND — 06</div>
+        <div class="industry-name">Precision<br/>Agriculture</div>
+        <div class="industry-tag">Soil Sensors · Irrigation · Yield AI</div>
+      </div>
+    </div>
+
+    <!-- Healthcare -->
+    <div class="industry-tile" id="industry-healthcare" role="article">
+      <img
+        src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=600&q=80&auto=format"
+        alt="Healthcare facility IoT monitoring"
+        class="industry-tile-image"
+        loading="lazy"
+      />
+      <div class="industry-overlay"></div>
+      <div class="industry-hover-detail">Asset tracking<br/>Clinical IoT</div>
+      <div class="industry-label">
+        <div class="industry-number">IND — 07</div>
+        <div class="industry-name">Healthcare<br/>Facilities</div>
+        <div class="industry-tag">Asset IoT · Clinical Env · Safety Systems</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================================
+     INTELLIGENT AUTOMATION — Split Composition
+     ============================================================ -->
+<section class="section-automation" id="automation" aria-label="Intelligent Automation">
+
+  <!-- Left: Environment visualization -->
+  <div class="auto-left">
+    <div class="auto-left-bg">
+      <svg width="100%" height="100%" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <pattern id="auto-grid" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+            <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(248,244,236,0.15)" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="600" height="600" fill="url(#auto-grid)"/>
+        <!-- Abstract machinery floor plan -->
+        <rect x="60" y="80" width="160" height="100" rx="0" fill="none" stroke="rgba(184,115,51,0.4)" stroke-width="1"/>
+        <rect x="80" y="100" width="40" height="40" fill="rgba(184,115,51,0.15)" stroke="rgba(184,115,51,0.5)" stroke-width="0.75"/>
+        <rect x="140" y="100" width="40" height="40" fill="rgba(184,115,51,0.15)" stroke="rgba(184,115,51,0.5)" stroke-width="0.75"/>
+        <text x="68" y="196" font-family="DM Mono" font-size="8" fill="rgba(184,115,51,0.7)" letter-spacing="1">PRESS ZONE A</text>
+
+        <rect x="280" y="60" width="200" height="140" rx="0" fill="none" stroke="rgba(184,115,51,0.3)" stroke-width="1"/>
+        <circle cx="360" cy="130" r="30" fill="none" stroke="rgba(184,115,51,0.35)" stroke-width="0.75"/>
+        <circle cx="360" cy="130" r="15" fill="rgba(184,115,51,0.1)" stroke="rgba(184,115,51,0.5)" stroke-width="0.75"/>
+        <text x="288" y="214" font-family="DM Mono" font-size="8" fill="rgba(184,115,51,0.7)" letter-spacing="1">COMPRESSOR B</text>
+
+        <rect x="60" y="260" width="120" height="200" rx="0" fill="none" stroke="rgba(184,115,51,0.25)" stroke-width="1"/>
+        <text x="68" y="474" font-family="DM Mono" font-size="8" fill="rgba(184,115,51,0.5)" letter-spacing="1">PUMP STATION 7</text>
+
+        <rect x="240" y="280" width="260" height="180" rx="0" fill="none" stroke="rgba(184,115,51,0.2)" stroke-width="1"/>
+        <text x="248" y="472" font-family="DM Mono" font-size="8" fill="rgba(184,115,51,0.4)" letter-spacing="1">SENSOR ARRAY 09</text>
+
+        <!-- Sensor dots -->
+        <circle cx="100" cy="120" r="3" fill="#B87333" opacity="0.8"/>
+        <circle cx="160" cy="120" r="3" fill="#B87333" opacity="0.8"/>
+        <circle cx="360" cy="130" r="4" fill="#B87333">
+          <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="120" cy="360" r="3" fill="#E8A840">
+          <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+        <circle cx="370" cy="370" r="5" fill="#E85A40">
+          <animate attributeName="r" values="4;7;4" dur="1.5s" repeatCount="indefinite"/>
+        </circle>
+
+        <!-- Connection paths -->
+        <line x1="160" y1="120" x2="360" y2="130" stroke="rgba(184,115,51,0.3)" stroke-width="0.75" stroke-dasharray="4,6"/>
+        <line x1="100" y1="120" x2="120" y2="360" stroke="rgba(184,115,51,0.2)" stroke-width="0.75" stroke-dasharray="4,6"/>
+        <line x1="360" y1="130" x2="370" y2="370" stroke="rgba(184,115,51,0.25)" stroke-width="0.75" stroke-dasharray="4,6"/>
+      </svg>
+    </div>
+
+    <div class="auto-left-content">
+      <div class="ci-number">05 / 05</div>
+      <div class="ci-section-label" style="margin-bottom:2rem">Physical Environment</div>
+      <h2 class="t-editorial-lg" style="margin-bottom:1.5rem">
+        Where<br/><em>signals</em><br/>become<br/>decisions.
+      </h2>
+      <p class="ci-para u-measure" style="margin-bottom:2rem">
+        OQENTRA's automation layer sits between physical reality and your operational intent — continuously bridging sensor truth and system response.
+      </p>
+      <div class="label-tag">Live Environment Map — Facility 01</div>
+    </div>
+  </div>
+
+  <!-- Right: Automation flow -->
+  <div class="auto-right">
+    <div class="ci-section-label" style="margin-bottom:2rem">Intelligent Response Flow</div>
+    <h2 class="t-editorial-md" style="margin-bottom:0.5rem">
+      From <em>exception</em> to <em>resolution</em>,<br/>autonomously.
+    </h2>
+    <p class="ci-para" style="margin-bottom:0;max-width:42ch">
+      When SENS.09 exceeded vibration limits, OQENTRA resolved the incident without human intervention in 340ms.
+    </p>
+
+    <div class="automation-flow" id="automation-flow">
+      <div class="auto-flow-step">
+        <div class="auto-step-num">01</div>
+        <div>
+          <div class="auto-step-title">Signal Detected</div>
+          <div class="auto-step-desc">SENS.09 reports 4.8g vibration — 60% above operational threshold of 3.0g</div>
+        </div>
+        <div class="auto-flow-line"></div>
+      </div>
+      <div class="auto-flow-step">
+        <div class="auto-step-num">02</div>
+        <div>
+          <div class="auto-step-title">Context Evaluated</div>
+          <div class="auto-step-desc">ML model cross-references historical patterns, maintenance log, and current load conditions</div>
+        </div>
+        <div class="auto-flow-line"></div>
+      </div>
+      <div class="auto-flow-step">
+        <div class="auto-step-num">03</div>
+        <div>
+          <div class="auto-step-title">Response Determined</div>
+          <div class="auto-step-desc">Decision engine identifies bearing wear as probable cause — recommends speed reduction and alert</div>
+        </div>
+        <div class="auto-flow-line"></div>
+      </div>
+      <div class="auto-flow-step">
+        <div class="auto-step-num">04</div>
+        <div>
+          <div class="auto-step-title">Commands Executed</div>
+          <div class="auto-step-desc">Machine speed reduced 25%, maintenance team notified, work order created — all in 340ms</div>
+        </div>
+        <div class="auto-flow-line"></div>
+      </div>
+      <div class="auto-flow-step">
+        <div class="auto-step-num">05</div>
+        <div>
+          <div class="auto-step-title">Outcome Logged</div>
+          <div class="auto-step-desc">Full incident timeline, actions taken, and resolution stored for compliance and model training</div>
+        </div>
+        <div class="auto-flow-line"></div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer" id="contact" role="contentinfo">
+
+  <div class="footer-top">
+    <div>
+      <div class="nav-wordmark" style="margin-bottom: 1.5rem;">
+        <img src="logo.jpg" alt="OQENTRA Logo" class="nav-logo-icon" style="border-radius: 8px; width: 40px; height: 40px; object-fit: cover; object-position: center 20%;" />
+        <div class="nav-wordmark-text">
+          <span class="nav-wordmark-primary">OQENTRA</span>
+          <span class="nav-wordmark-tagline">Connected Intelligence</span>
+        </div>
+      </div>
+      <p class="footer-brand-desc">
+        Industrial IoT infrastructure that perceives, reasons, and acts — delivering intelligent automation to critical operations worldwide.
+      </p>
+      <div class="u-divider-copper" style="margin-bottom:1.5rem"></div>
+      <div class="t-mono-xs" style="line-height:1.8">
+        Global HQ — Geneva, Switzerland<br/>
+        Operations — Frankfurt · Singapore · Houston<br/>
+        info@oqentra.io · +41 22 900 1100
+      </div>
+      <div class="footer-socials">
+        <a href="#" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+        <a href="#" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+      </div>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Platform</div>
+      <ul class="footer-links">
+        <li><a href="#intelligence" id="footer-connected">Connected Intelligence</a></li>
+        <li><a href="#operations" id="footer-operations">Real-Time Operations</a></li>
+        <li><a href="#automation" id="footer-automation">Intelligent Automation</a></li>
+        <li><a href="#" id="footer-edge">Edge Computing</a></li>
+        <li><a href="#" id="footer-api">API & Integration</a></li>
+        <li><a href="#" id="footer-security">Security Framework</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Industries</div>
+      <ul class="footer-links">
+        <li><a href="#industries" id="footer-manufacturing">Manufacturing</a></li>
+        <li><a href="#industries" id="footer-energy">Energy & Grid</a></li>
+        <li><a href="#industries" id="footer-logistics">Logistics</a></li>
+        <li><a href="#industries" id="footer-water">Water Infrastructure</a></li>
+        <li><a href="#industries" id="footer-buildings">Smart Buildings</a></li>
+        <li><a href="#industries" id="footer-agriculture">Agriculture</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="#" id="footer-about">About OQENTRA</a></li>
+        <li><a href="#" id="footer-research">Research Lab</a></li>
+        <li><a href="#" id="footer-partners">Global Partners</a></li>
+        <li><a href="#" id="footer-careers">Careers</a></li>
+        <li><a href="#" id="footer-press">Press & Media</a></li>
+        <li><a href="#" id="footer-contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-left">
+      <span class="footer-legal">© 2026 OQENTRA Systems AG. All rights reserved.</span>
+      <span class="footer-legal"><a href="#" id="footer-privacy" style="color:inherit;text-decoration:none">Privacy Policy</a></span>
+      <span class="footer-legal"><a href="#" id="footer-terms" style="color:inherit;text-decoration:none">Terms of Use</a></span>
+    </div>
+    <div class="footer-coord">
+      OQENTRA.SYS — v4.2.1 — 48,291 nodes active — 99.97% uptime
+    </div>
+  </div>
+</footer>
+
+
+<script src="main.js"></script>
+</body>
+</html>
