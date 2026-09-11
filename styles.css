@@ -88,6 +88,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 body {
@@ -881,7 +882,8 @@ body {
 
 .ops-machine-meta {
   display: flex;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
 }
 
 .ops-machine-stat {
@@ -902,6 +904,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-width: 0;
 }
 
 .ops-metric-grid {
@@ -1039,12 +1042,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  min-width: 0;
 }
 
 .ops-gauge-group {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  min-width: 0;
 }
 
 .ops-gauge {
@@ -1124,6 +1129,8 @@ body {
   line-height: 1.5;
   color: var(--ivory-400);
   letter-spacing: 0.04em;
+  min-width: 0;
+  word-wrap: break-word;
 }
 
 /* ============================================================
@@ -1736,7 +1743,9 @@ body {
   }
   .hero-left { padding: 3rem 1.5rem; }
   .ci-stat-row { grid-template-columns: 1fr; }
+  .ci-body { grid-template-columns: 1fr; }
   .ops-header { flex-direction: column; align-items: flex-start; gap: 2rem; padding: 3rem 1.5rem 1.5rem; }
+  .ops-panel-left, .ops-panel-center, .ops-panel-right { padding: 1.5rem 1rem; min-width: 0; }
   .ops-status-bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
   .ops-metric-grid { grid-template-columns: 1fr; }
   .journey-nodes { grid-template-columns: 1fr; }
