@@ -548,8 +548,8 @@ function initNavActiveState() {
       });
     }
   }, {
-    rootMargin: '-20% 0px -60% 0px',
-    threshold: 0.1
+    rootMargin: '-30% 0px -60% 0px',
+    threshold: 0
   });
 
   sections.forEach((section) => observer.observe(section));
@@ -584,4 +584,44 @@ document.addEventListener('DOMContentLoaded', () => {
     'color:#B87333;font-family:monospace;font-size:14px;font-weight:bold;',
     'color:#6A6866;font-family:monospace;font-size:11px;'
   );
+});
+
+// Back to Top Button Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const backToTopBtn = document.getElementById('back-to-top');
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+      } else {
+        backToTopBtn.classList.remove('show');
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+});
+
+// Mobile Menu Logic
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const navLinks = document.getElementById('nav-links');
+  
+  if (mobileMenuBtn && navLinks) {
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+    });
+
+    // Close menu when a link is clicked
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+      });
+    });
+  }
 });

@@ -9,6 +9,7 @@
   <meta property="og:title" content="OQENTRA — Connected Intelligence Systems" />
   <meta property="og:description" content="The world is connected. Make it intelligent." />
   <meta property="og:type" content="website" />
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -25,7 +26,7 @@
     </div>
   </div>
 
-  <ul class="nav-links" role="list">
+  <ul class="nav-links" id="nav-links" role="list">
     <li><a href="#hero" id="nav-home">Home</a></li>
     <li><a href="#intelligence" id="nav-intelligence">Intelligence</a></li>
     <li><a href="#operations" id="nav-operations">Operations</a></li>
@@ -37,6 +38,14 @@
   <div class="nav-coords" id="nav-coords" aria-label="System coordinates">
     SYS — 48.8566°N 2.3522°E — <span id="nav-time">00:00:00</span>
   </div>
+
+  <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </button>
 </nav>
 
 
@@ -1328,6 +1337,12 @@
   </div>
 </footer>
 
+
+<button id="back-to-top" class="back-to-top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
 
 <script src="main.js"></script>
 </body>

@@ -113,11 +113,13 @@ body {
 
 .t-editorial-xl {
   font-family: var(--font-editorial);
-  font-size: clamp(3.5rem, 8vw, 7.5rem);
+  font-size: clamp(2.5rem, 12vw, 7.5rem);
   font-weight: 300;
   line-height: 0.92;
   letter-spacing: -0.02em;
   color: var(--ivory-100);
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .t-editorial-lg {
@@ -232,7 +234,8 @@ body {
   height: 80px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: var(--space-lg);
   padding: 0 3rem;
   border-bottom: 1px solid var(--border);
   background: rgba(10, 9, 8, 0.92);
@@ -322,6 +325,7 @@ body {
 }
 
 .nav-coords {
+  margin-left: auto;
   font-family: var(--font-mono);
   font-size: 0.55rem;
   color: var(--graphite-300);
@@ -1132,8 +1136,8 @@ body {
 
 .journey-header {
   display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 4rem;
+  grid-template-columns: 1fr;
+  gap: 2rem;
   margin-bottom: 5rem;
 }
 
@@ -1305,8 +1309,9 @@ body {
 .industry-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(10, 9, 8, 0.9) 0%, transparent 50%);
+  background: linear-gradient(to top, rgba(10, 9, 8, 0.95) 0%, rgba(10, 9, 8, 0.6) 40%, rgba(10, 9, 8, 0.8) 100%);
   pointer-events: none;
+  transition: background var(--t-mid);
 }
 
 .industry-label {
@@ -1673,6 +1678,20 @@ body {
    RESPONSIVE ADAPTATIONS
    ============================================================ */
 
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.mobile-menu-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
 @media (max-width: 1100px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .hero-right { height: 400px; }
@@ -1689,14 +1708,78 @@ body {
 }
 
 @media (max-width: 768px) {
-  .nav { padding: 0 1.5rem; }
-  .nav-links { display: none; }
+  .nav { padding: 0 1.5rem; justify-content: space-between; gap: 1rem; }
+  .nav-coords { display: none; }
+  .mobile-menu-btn { display: flex; margin-left: 0; }
+  .nav-links { 
+    position: fixed;
+    top: 80px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 80px);
+    background: rgba(10, 9, 8, 0.98);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2rem;
+    gap: 1.5rem;
+    transition: right var(--t-mid);
+    border-left: 1px solid var(--border);
+    display: flex;
+  }
+  .nav-links.open {
+    right: 0;
+  }
   .hero-left { padding: 3rem 1.5rem; }
-  .ci-stat-row { grid-template-columns: 1fr 1fr; }
-  .ops-metric-grid { grid-template-columns: 1fr 1fr; }
+  .ci-stat-row { grid-template-columns: 1fr; }
+  .ops-header { flex-direction: column; align-items: flex-start; gap: 2rem; padding: 3rem 1.5rem 1.5rem; }
+  .ops-status-bar { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .ops-metric-grid { grid-template-columns: 1fr; }
   .journey-nodes { grid-template-columns: 1fr; }
-  .footer-top { grid-template-columns: 1fr; }
+  .footer-top { grid-template-columns: 1fr 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 1.5rem; padding: 1.5rem; }
+  .footer-bottom-left { flex-direction: column; align-items: flex-start; gap: 1rem; }
   .section-ci, .section-journey { padding-left: 1.5rem; padding-right: 1.5rem; }
   .auto-left, .auto-right { padding: 3rem 1.5rem; }
   .industries-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   BACK TO TOP BUTTON
+   ============================================================ */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--c-primary);
+  color: var(--c-bg);
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 4px 12px rgba(220, 255, 7, 0.3);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background: #e5ff24;
+  transform: translateY(-3px);
+}
+
+.back-to-top svg {
+  width: 1.5rem;
+  height: 1.5rem;
 }
